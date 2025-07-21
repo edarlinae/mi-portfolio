@@ -9,6 +9,7 @@ export interface Technology {
 export interface Project {
   title: string;
   description: string;
+  imageUrl: string; // <-- PROPIEDAD AÑADIDA
   technologies: Technology[];
   githubUrl: string;
 }
@@ -22,22 +23,22 @@ export interface Project {
 })
 export class ProjectList {
   protected readonly projects = signal<Project[]>([
-    // --- PROYECTO NUEVO AÑADIDO AQUÍ ---
     {
       title: 'Portfolio Profesional (Este Proyecto)',
       description: 'Portfolio personal interactivo desarrollado desde cero con las últimas versiones de Angular para mostrar mis proyectos y habilidades. Incluye modo claro/oscuro y un diseño responsive.',
+      imageUrl: 'assets/projects/portfolio-preview.png', // <-- RUTA AÑADIDA
       technologies: [
         { name: 'Angular', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg' },
         { name: 'TypeScript', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
         { name: 'SCSS', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg' },
         { name: 'HTML5', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' }
       ],
-      githubUrl: 'https://github.com/edarlinae/portfolio-final' // URL de este mismo portfolio
+      githubUrl: 'https://github.com/edarlinae/portfolio-final'
     },
-    // --- FIN DEL PROYECTO NUEVO ---
     {
       title: 'ClickToCall - Extensión de Chrome',
       description: 'Extensión compleja que detecta teléfonos en webs y permite llamar o enviar WhatsApps vía API, inyectando UI dinámica en las páginas.',
+      imageUrl: 'assets/projects/clicktocall-preview.png', // <-- RUTA AÑADIDA
       technologies: [
         { name: 'JavaScript (ES6+)', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
         { name: 'HTML5', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
@@ -48,7 +49,8 @@ export class ProjectList {
     },
     {
       title: 'Weather App',
-      description: 'Aplicación web completa para consultar el tiempo, con modo oscuro, multi-idioma y historial de búsquedas, consumiendo una API REST.',
+      description: 'Aplicación web completa para consultar el tiempo, con modo claro, multi-idioma y historial de búsquedas, consumiendo una API REST.',
+      imageUrl: 'assets/projects/weather-app-preview.jpg', // <-- RUTA AÑADIDA
       technologies: [
         { name: 'JavaScript (ES6+)', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
         { name: 'HTML5', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
