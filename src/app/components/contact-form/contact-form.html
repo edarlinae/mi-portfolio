@@ -1,0 +1,16 @@
+<div class="contact-container">
+  <h2>Hablemos</h2>
+  <p>
+    Estoy buscando activamente nuevas oportunidades y desafíos como desarrolladora. Si crees que mi perfil encaja en tu equipo o proyecto, no dudes en contactarme.
+  </p>
+  <div class="contact-links">
+    <a [href]="'mailto:' + email()" class="contact-button">
+      <span class="material-symbols-outlined">mail</span>
+      {{ email() }}
+    </a>
+    <a [href]="'tel:' + phone()" class="contact-button">
+      <span class="material-symbols-outlined">call</span>
+      {{ phone() }}
+    </a>
+  </div>
+</div>

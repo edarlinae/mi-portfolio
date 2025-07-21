@@ -1,0 +1,18 @@
+<div class="experience-container">
+  <h2>Experiencia</h2>
+  <div class="timeline">
+    @for (job of jobs(); track job.title) {
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="date">{{ job.date }}</span>
+          <h3>{{ job.title }} &middot; <span class="company">{{ job.company }}</span></h3>
+          <ul>
+            @for (item of job.description; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  border: 5px solid var(--surface);
+  flex-shrink: 0;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-text strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}

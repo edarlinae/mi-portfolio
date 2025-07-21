@@ -1,0 +1,40 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centramos todo */
+  min-height: 80vh; /* Hacemos que ocupe casi toda la pantalla inicial */
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.name {
+  font-size: clamp(2.8rem, 6vw, 4.5rem); /* Texto responsive más grande */
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2rem auto; /* Añadimos margen inferior */
+  line-height: 1.6;
+}
+
+.cta-button {
+  text-decoration: none;
+  background-color: var(--accent);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--accent) 40%, transparent);
+}

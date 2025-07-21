@@ -1,0 +1,102 @@
+.projects {
+  padding-top: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.project-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.tech-list {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  flex-grow: 0 !important;
+}
+
+.project-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  justify-content: center; /* <-- CENTRA LOS LOGOS */
+}
+
+.project-logos img {
+  height: 32px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.project-logos img:hover {
+  transform: scale(1.1);
+}
+
+.fallback-tech {
+  background-color: color-mix(in srgb, var(--text-secondary) 15%, transparent);
+  color: var(--text-secondary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.project-card a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: var(--accent);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-card a:hover {
+  background-color: var(--text-primary);
+  transform: scale(1.03);
+}
