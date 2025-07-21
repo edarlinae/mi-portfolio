@@ -36,25 +36,19 @@ h2 {
   transform: translateY(-5px);
 }
 
-/* --- ESTILOS MODIFICADOS Y NUEVOS --- */
-
-/* 1. El contenedor que hace de marco */
 .image-container {
-  background-color: color-mix(in srgb, var(--background) 50%, #fff); /* Un fondo muy sutil, ligeramente más oscuro que el fondo de la página */
-  padding: 1.5rem; /* Este padding crea el "marco" alrededor de la imagen */
+  background-color: color-mix(in srgb, var(--background) 50%, #fff);
+  padding: 1.5rem;
 }
 
-/* 2. La imagen del proyecto */
 .project-image {
   width: 100%;
   height: 100%;
-  max-height: 200px; /* Limitamos la altura máxima de la imagen */
-  object-fit: contain; /* <-- ESTA ES LA CLAVE: Muestra la imagen completa sin recortar */
+  max-height: 200px;
+  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
-
-/* --- FIN DE ESTILOS MODIFICADOS --- */
 
 .card-content {
   padding: 1.5rem;
@@ -88,6 +82,7 @@ h2 {
   gap: 1rem;
   margin-bottom: 1.5rem;
   flex-grow: 1;
+  justify-content: center;
 }
 
 .project-logos img {
@@ -100,6 +95,9 @@ h2 {
   transform: scale(1.1);
 }
 
+/* --- ESTILOS MODIFICADOS Y NUEVOS --- */
+
+/* 1. Botón modificado para alinear el logo y el texto */
 .card-content a {
   color: white;
   text-decoration: none;
@@ -110,9 +108,22 @@ h2 {
   text-align: center;
   transition: background-color 0.2s ease, transform 0.2s ease;
   margin-top: auto;
+  
+  /* Propiedades añadidas para la alineación */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Espacio entre el logo y el texto */
 }
 
 .card-content a:hover {
   background-color: var(--text-primary);
   transform: scale(1.03);
+}
+
+/* 2. Nuevo estilo para el logo de GitHub */
+.github-logo {
+  height: 20px;
+  width: 20px;
+  filter: invert(1) brightness(2); /* <-- Hacemos el blanco más brillante */
 }
