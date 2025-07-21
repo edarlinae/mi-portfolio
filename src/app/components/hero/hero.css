@@ -1,15 +1,25 @@
 .hero-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Centramos todo */
-  min-height: 80vh; /* Hacemos que ocupe casi toda la pantalla inicial */
+  align-items: center;
   text-align: center;
-  padding-bottom: 4rem;
+  /* Espaciado controlado en lugar de altura mínima */
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.hero-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  border: 5px solid var(--surface);
 }
 
 .name {
-  font-size: clamp(2.8rem, 6vw, 4.5rem); /* Texto responsive más grande */
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
@@ -19,7 +29,7 @@
   font-size: 1.25rem;
   color: var(--text-secondary);
   max-width: 600px;
-  margin: 0 auto 2rem auto; /* Añadimos margen inferior */
+  margin: 0 auto 2rem auto;
   line-height: 1.6;
 }
 
