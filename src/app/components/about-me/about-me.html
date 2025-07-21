@@ -1,14 +1,12 @@
 <div class="about-container">
   <div class="about-text">
-    <h2>Sobre mí</h2>
+    <h2>{{ t().about_title }}</h2>
+    <p>{{ t().about_p1 }}</p>
     <p>
-      Empecé en el mundo de la integración social, movida por mis valores y mi vocación de ayudar. Sin embargo, la programación llevaba años llamándome a través de mi entorno, de las conversaciones en casa y de los códigos que veía con curiosidad en las pantallas de mi familia de programadores.
+      {{ t().about_p2.split('“A programar se aprende programando”')[0] }}
+      <strong>“A programar se aprende programando”</strong>
+      {{ t().about_p2.split('“A programar se aprende programando”')[1] }}
     </p>
-    <p>
-      Lo que empezó como un juego —pequeñas bromas en el navegador y extensiones con efectos absurdos— se convirtió en una pasión. Entendí su lema: <strong>“A programar se aprende programando”</strong>. Así que di el paso, me formé en Desarrollo de Aplicaciones Multiplataforma y descubrí que este es el lugar donde mi curiosidad, mi lógica y mis ganas de crear encuentran su sitio.
-    </p>
-    <p>
-      Lo que me define es mi motivación, mi rápida capacidad de aprendizaje y un profundo respeto por el oficio. Para mí, no es solo un trabajo: es algo que, sin saberlo, llevo años preparando.
-    </p>
+    <p>{{ t().about_p3 }}</p>
   </div>
 </div>

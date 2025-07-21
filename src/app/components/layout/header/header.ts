@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
+import { TranslationService } from '../../../services/translation'; // <-- RUTA CORREGIDA
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,12 @@ import { Component, signal } from '@angular/core';
   styleUrl: './header.css'
 })
 export class Header {
+  private translationService = inject(TranslationService);
+  public t = this.translationService.t;
+  
   isDarkMode = signal(false);
 
   constructor() {
-    // Comprueba si el usuario ya tenía un tema preferido
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     this.isDarkMode.set(prefersDark);
     document.body.classList.toggle('dark-mode', prefersDark);
@@ -20,5 +23,9 @@ export class Header {
   toggleTheme() {
     this.isDarkMode.update(value => !value);
     document.body.classList.toggle('dark-mode', this.isDarkMode());
+  }
+  
+  changeLanguage(lang: 'es' | 'en' | 'fr') {
+    this.translationService.setLanguage(lang);
   }
 }

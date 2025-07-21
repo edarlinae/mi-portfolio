@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslationService, ProjectTranslations } from '../../services/translation';
 
 export interface Technology {
   name: string;
@@ -7,8 +8,7 @@ export interface Technology {
 }
 
 export interface Project {
-  title: string;
-  description: string;
+  translationKey: 'project1' | 'project2' | 'project3'; // Tipo simplificado
   imageUrl: string;
   technologies: Technology[];
   githubUrl: string;
@@ -22,10 +22,12 @@ export interface Project {
   styleUrl: './project-list.css'
 })
 export class ProjectList {
+  private translationService = inject(TranslationService);
+  public t = this.translationService.t;
+
   protected readonly projects = signal<Project[]>([
     {
-      title: 'Portfolio Profesional (Este Proyecto)',
-      description: 'Portfolio personal interactivo desarrollado desde cero con las últimas versiones de Angular para mostrar mis proyectos y habilidades. Incluye modo claro/oscuro y un diseño responsive.',
+      translationKey: 'project1',
       imageUrl: 'assets/projects/portfolio-preview.png',
       technologies: [
         { name: 'Angular', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg' },
@@ -33,12 +35,10 @@ export class ProjectList {
         { name: 'SCSS', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg' },
         { name: 'HTML5', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' }
       ],
-      // Asegúrate de que esta URL sea la correcta para el portfolio
-      githubUrl: 'https://github.com/edarlinae/mi-portfolio'
+      githubUrl: 'https://github.com/edarlinae/portfolio-final'
     },
     {
-      title: 'ClickToCall - Extensión de Chrome',
-      description: 'Extensión compleja que detecta teléfonos en webs y permite llamar o enviar WhatsApps vía API, inyectando UI dinámica en las páginas.',
+      translationKey: 'project2',
       imageUrl: 'assets/projects/clicktocall-preview.png',
       technologies: [
         { name: 'JavaScript (ES6+)', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
@@ -46,12 +46,10 @@ export class ProjectList {
         { name: 'CSS3', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
         { name: 'Chrome Extension API', iconUrl: null }
       ],
-      // Pega aquí la URL correcta de tu repositorio ClickToCall
-      githubUrl: 'https://github.com/edarlinae/Prueba-CTCB'
+      githubUrl: 'https://github.com/edarlinae/ClickToCall'
     },
     {
-      title: 'Weather App',
-      description: 'Aplicación web completa para consultar el tiempo, con modo claro, multi-idioma y historial de búsquedas, consumiendo una API REST.',
+      translationKey: 'project3',
       imageUrl: 'assets/projects/weather-app-preview.jpg',
       technologies: [
         { name: 'JavaScript (ES6+)', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
@@ -59,12 +57,16 @@ export class ProjectList {
         { name: 'CSS3', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
         { name: 'API REST', iconUrl: null }
       ],
-      // Pega aquí la URL correcta de tu repositorio Weather-App
-      githubUrl: 'https://github.com/edarlinae/TiempoApp'
+      githubUrl: 'https://github.com/edarlinae/Weather-App'
     }
   ]);
 
   getTechnologyNames(technologies: Technology[]): string {
     return technologies.map(tech => tech.name).join(', ');
+  }
+
+  // Nueva función para obtener la traducción de forma segura
+  getProjectTranslation(key: 'project1' | 'project2' | 'project3'): ProjectTranslations {
+    return this.t()[key];
   }
 }

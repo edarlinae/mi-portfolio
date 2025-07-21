@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
+import { TranslationService } from '../../services/translation';
 
 @Component({
   selector: 'app-contact-form',
@@ -8,7 +9,9 @@ import { Component, signal } from '@angular/core';
   styleUrl: './contact-form.css'
 })
 export class ContactForm {
-  // Información extraída de tu CV
+  private translationService = inject(TranslationService);
+  public t = this.translationService.t;
+
   protected readonly email = signal('caparrosmasiaalicia@gmail.com');
   protected readonly phone = signal('676 28 40 60');
 }

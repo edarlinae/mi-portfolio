@@ -10,15 +10,17 @@ header {
   padding: 1rem 0;
 }
 
+/* Contenedor principal que alineará todo */
 .header-content {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
-  justify-content: space-between; /* Alinea nav a la izquierda y botón a la derecha */
+  justify-content: space-between; /* <-- La clave: pone la navegación a un lado y los controles al otro */
   align-items: center;
 }
 
+/* Estilos para la navegación (izquierda) */
 nav {
   display: flex;
   justify-content: center;
@@ -54,6 +56,41 @@ nav a::after {
 nav a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+/* Contenedor para los controles (derecha) */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.language-switcher button {
+  background: none;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.language-switcher button:hover {
+  transform: scale(1.1);
+  border-color: var(--accent);
+}
+
+.language-switcher img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .theme-toggle {

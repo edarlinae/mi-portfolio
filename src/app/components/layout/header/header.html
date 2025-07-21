@@ -1,15 +1,30 @@
 <header>
   <div class="header-content">
     <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#proyectos">Mis proyectos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#sobre-mi">{{ t().nav_about }}</a>
+      <a href="#experiencia">{{ t().nav_experience }}</a>
+      <a href="#proyectos">{{ t().nav_projects }}</a>
+      <a href="#contacto">{{ t().nav_contact }}</a>
     </nav>
-    <button (click)="toggleTheme()" class="theme-toggle" [attr.aria-label]="'Cambiar a modo ' + (isDarkMode() ? 'claro' : 'oscuro')">
-      <span class="material-symbols-outlined">
-        {{ isDarkMode() ? 'light_mode' : 'dark_mode' }}
-      </span>
-    </button>
+    
+    <div class="controls">
+      <div class="language-switcher">
+        <button (click)="changeLanguage('es')">
+          <img src="https://flagcdn.com/es.svg" alt="Español">
+        </button>
+        <button (click)="changeLanguage('en')">
+          <img src="https://flagcdn.com/gb.svg" alt="English">
+        </button>
+        <button (click)="changeLanguage('fr')">
+          <img src="https://flagcdn.com/fr.svg" alt="Français">
+        </button>
+      </div>
+      <button (click)="toggleTheme()" class="theme-toggle" [attr.aria-label]="'Cambiar a modo ' + (isDarkMode() ? 'claro' : 'oscuro')">
+        <span class="material-symbols-outlined">
+          {{ isDarkMode() ? 'light_mode' : 'dark_mode' }}
+        </span>
+      </button>
+    </div>
+
   </div>
 </header>
