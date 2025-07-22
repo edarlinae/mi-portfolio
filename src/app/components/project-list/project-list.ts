@@ -35,7 +35,7 @@ export class ProjectList {
         { name: 'SCSS', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg' },
         { name: 'HTML5', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' }
       ],
-      githubUrl: 'https://github.com/edarlinae/portfolio-final'
+      githubUrl: 'https://github.com/edarlinae/mi-portfolio'
     },
     {
       translationKey: 'project2',
@@ -46,7 +46,7 @@ export class ProjectList {
         { name: 'CSS3', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
         { name: 'Chrome Extension API', iconUrl: null }
       ],
-      githubUrl: 'https://github.com/edarlinae/ClickToCall'
+      githubUrl: 'https://github.com/edarlinae/Prueba-CTCB'
     },
     {
       translationKey: 'project3',
@@ -57,7 +57,7 @@ export class ProjectList {
         { name: 'CSS3', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
         { name: 'API REST', iconUrl: null }
       ],
-      githubUrl: 'https://github.com/edarlinae/Weather-App'
+      githubUrl: 'https://github.com/edarlinae/TiempoApp'
     }
   ]);
 

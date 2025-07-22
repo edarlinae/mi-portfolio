@@ -32,7 +32,7 @@ export class ProjectList {
         { name: 'CSS3', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
         { name: 'Chrome Extension API', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlechrome/googlechrome-original.svg' }
       ],
-      githubUrl: 'https://github.com/edarlinae/ClickToCall'
+      githubUrl: 'https://github.com/edarlinae/Prueba-CTCB'
     },
     {
       title: 'Weather App',
