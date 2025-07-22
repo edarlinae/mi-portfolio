@@ -8,13 +8,13 @@ import { ProjectList } from './components/project-list/project-list';
 import { ContactForm } from './components/contact-form/contact-form';
 import { Experience } from './components/experience/experience';
 import { AboutMe } from './components/about-me/about-me';
-import { CommonModule } from '@angular/common'; // <-- AÑADIR ESTA LÍNEA
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, // <-- AÑADIR ESTA LÍNEA
+    CommonModule, 
     RouterOutlet,
     Header,
     Footer,
@@ -35,7 +35,7 @@ export class App {
 
   @HostListener('window:scroll')
   onWindowScroll(): void {
-    // Si el scroll vertical es mayor de 300px, mostramos el botón
+  
     if (window.scrollY > 300) {
       this.showScrollButton.set(true);
     } else {

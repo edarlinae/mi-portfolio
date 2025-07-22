@@ -8,7 +8,7 @@ export interface Technology {
 }
 
 export interface Project {
-  translationKey: 'project1' | 'project2' | 'project3'; // Tipo simplificado
+  translationKey: 'project1' | 'project2' | 'project3'; 
   imageUrl: string;
   technologies: Technology[];
   githubUrl: string;
@@ -65,7 +65,6 @@ export class ProjectList {
     return technologies.map(tech => tech.name).join(', ');
   }
 
-  // Nueva función para obtener la traducción de forma segura
   getProjectTranslation(key: 'project1' | 'project2' | 'project3'): ProjectTranslations {
     return this.t()[key];
   }

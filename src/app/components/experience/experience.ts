@@ -4,7 +4,7 @@ import { TranslationService, JobTranslations } from '../../services/translation'
 
 export interface Job {
   date: string;
-  translationKey: 'job1' | 'job2'; // Tipo simplificado y más seguro
+  translationKey: 'job1' | 'job2';
 }
 
 @Component({
@@ -29,7 +29,7 @@ export class Experience {
     }
   ]);
 
-  // Nueva función para obtener la traducción de forma segura
+  // traducción segura
   getJobTranslation(key: 'job1' | 'job2'): JobTranslations {
     return this.t()[key];
   }

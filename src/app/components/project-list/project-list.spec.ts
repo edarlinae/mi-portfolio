@@ -1,16 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// Nueva estructura para las tecnologías
+//Estructura para las tecnologías
 export interface Technology {
   name: string;
-  iconUrl: string | null; // La URL puede ser nula si no encontramos un logo
+  iconUrl: string | null; 
 }
 
 export interface Project {
   title: string;
   description: string;
-  technologies: Technology[]; // Ahora es una lista de objetos Technology
+  technologies: Technology[]; 
   githubUrl: string;
 }
 

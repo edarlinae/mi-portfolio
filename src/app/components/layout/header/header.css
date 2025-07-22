@@ -90,7 +90,6 @@ nav a:hover::after {
 .current-lang-btn .material-symbols-outlined {
   font-size: 1.2rem;
 }
-/* --- FIN DE ESTILOS MODIFICADOS --- */
 
 .language-dropdown {
   position: absolute;
