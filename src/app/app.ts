@@ -1,5 +1,4 @@
 import { Component, HostListener, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 import { Header } from './components/layout/header/header';
 import { Footer } from './components/layout/footer/footer';
@@ -15,7 +14,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [
     CommonModule, 
-    RouterOutlet,
     Header,
     Footer,
     Hero,
