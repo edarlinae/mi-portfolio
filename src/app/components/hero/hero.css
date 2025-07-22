@@ -8,8 +8,8 @@
 }
 
 .hero-photo {
-  width: 180px; /* Aumentado de 150px a 180px */
-  height: 180px; /* Aumentado de 150px a 180px */
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 2rem;
@@ -32,6 +32,13 @@
   line-height: 1.6;
 }
 
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .cta-button {
   text-decoration: none;
   background-color: var(--accent);
@@ -41,9 +48,12 @@
   font-weight: 500;
   font-size: 1rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* Eliminamos el borde transparente que ya no es necesario */
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 15px color-mix(in srgb, var(--accent) 40%, transparent);
 }
+
+/* Ya no necesitamos los estilos para .cta-button.secondary */

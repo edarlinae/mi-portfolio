@@ -9,16 +9,23 @@
     
     <div class="controls">
       <div class="language-switcher">
-        <button (click)="changeLanguage('es')">
-          <img src="https://flagcdn.com/es.svg" alt="Español">
+        <button class="current-lang-btn" (click)="toggleLangMenu()">
+          <span class="material-symbols-outlined">language</span>
+          <span>Idioma</span>
         </button>
-        <button (click)="changeLanguage('en')">
-          <img src="https://flagcdn.com/gb.svg" alt="English">
-        </button>
-        <button (click)="changeLanguage('fr')">
-          <img src="https://flagcdn.com/fr.svg" alt="Français">
-        </button>
+        
+        @if (isLangMenuOpen()) {
+          <div class="language-dropdown">
+            @for (lang of languages; track lang.code) {
+              <button class="lang-option" (click)="selectLanguage(lang)">
+                <img [src]="lang.flagUrl" [alt]="lang.name">
+                <span>{{ lang.name }}</span>
+              </button>
+            }
+          </div>
+        }
       </div>
+
       <button (click)="toggleTheme()" class="theme-toggle" [attr.aria-label]="'Cambiar a modo ' + (isDarkMode() ? 'claro' : 'oscuro')">
         <span class="material-symbols-outlined">
           {{ isDarkMode() ? 'light_mode' : 'dark_mode' }}
