@@ -33,7 +33,7 @@ export class ProjectList {
       imageUrl: 'assets/apego-consciente.png',
       translationKey: 'project4',
       githubUrl: 'https://github.com/edarlinae/apego-consciente.git',
-      liveDemoUrl: 'https://apegoconsciente.vercel.app/',
+      liveDemoUrl: 'https://apego-consciente.vercel.app/home/',
       technologies: [
         { name: 'Angular', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg' },
         { name: 'TypeScript', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg' },
