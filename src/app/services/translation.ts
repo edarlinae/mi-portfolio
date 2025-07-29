@@ -42,7 +42,14 @@ export class TranslationService {
       job2: { title: 'Formadora y Desarrolladora de Contenidos Digitales', company: 'COCEDER', description: ['Análisis de las necesidades del usuario para diseñar y adaptar contenidos tecnológicos, asegurando una curva de aprendizaje suave.','Soporte técnico y resolución de problemas a usuarios con distintos niveles de competencia digital.'] },
       project1: { title: 'Portfolio Profesional (Este Proyecto)', description: 'Portfolio personal interactivo desarrollado desde cero con las últimas versiones de Angular para mostrar mis proyectos y habilidades. Incluye modo claro/oscuro y un diseño responsive.' },
       project2: { title: 'ClickToCall - Extensión de Chrome', description: 'Extensión compleja que detecta teléfonos en webs y permite llamar o enviar WhatsApps vía API, inyectando UI dinámica en las páginas.' },
-      project3: { title: 'Weather App', description: 'Aplicación web completa para consultar el tiempo, con modo claro, multi-idioma y historial de búsquedas, consumiendo una API REST.' }
+      project3: {
+        title: 'Weather App (Angular)',
+        description: 'Aplicación web completa para consultar el tiempo en tiempo real, desarrollada con Angular, que incluye un selector de idioma, historial de búsquedas y un diseño responsivo con modo claro/oscuro. Consume datos de una API REST.'
+      },
+      project4: { // NUEVO PROYECTO: ApegoConsciente
+        title: 'Apego Consciente',
+        description: 'Aplicación web dedicada a explorar y fomentar el apego consciente, ofreciendo recursos y herramientas para entender las dinámicas de las relaciones y el bienestar emocional. Desarrollada con Angular.'
+      }
     },
     en: {
       nav_about: 'About me',
@@ -66,7 +73,14 @@ export class TranslationService {
       job2: { title: 'Trainer and Digital Content Developer', company: 'COCEDER', description: ['Analysis of user needs to design and adapt technological content, ensuring a smooth learning curve.','Technical support and problem-solving for users with different levels of digital competence.'] },
       project1: { title: 'Professional Portfolio (This Project)', description: 'Interactive personal portfolio developed from scratch with the latest versions of Angular to showcase my projects and skills. Features light/dark mode and a responsive design.' },
       project2: { title: 'ClickToCall - Chrome Extension', description: 'Complex extension that detects phone numbers on websites and allows calling or sending WhatsApp messages via API, injecting dynamic UI into the pages.' },
-      project3: { title: 'Weather App', description: 'Complete web application to check the weather, with dark mode, multi-language support, and search history, consuming a REST API.' }
+      project3: {
+        title: 'Weather App (Angular)',
+        description: 'Complete web application to check the weather in real-time, developed with Angular, including a language selector, search history, and a responsive design with light/dark mode. Consumes data from a REST API.'
+      },
+      project4: { // NUEVO PROYECTO: ApegoConsciente
+        title: 'Apego Consciente',
+        description: 'Web application dedicated to exploring and fostering conscious attachment, offering resources and tools to understand relationship dynamics and emotional well-being. Developed with Angular.'
+      }
     },
     fr: {
       nav_about: 'À propos de moi',
@@ -90,7 +104,14 @@ export class TranslationService {
       job2: { title: 'Formatrice et Développeuse de Contenus Numériques', company: 'COCEDER', description: ['Analyse des besoins des utilisateurs pour concevoir et adapter des contenus technologiques, assurant une courbe d\'apprentissage douce.','Support technique et résolution de problèmes pour des utilisateurs ayant différents niveaux de compétence numérique.'] },
       project1: { title: 'Portfolio Professionnel (Ce Projet)', description: 'Portfolio personnel interactif développé à partir de zéro avec les dernières versions d\'Angular pour présenter mes projets et compétences. Inclut un mode clair/sombre et un design responsive.' },
       project2: { title: 'ClickToCall - Extension Chrome', description: 'Extension complexe qui détecte les numéros de téléphone sur les sites web et permet d\'appeler ou d\'envoyer des messages WhatsApp via une API, en injectant une UI dynamique dans les pages.' },
-      project3: { title: 'Weather App', description: 'Application web complète pour consulter la météo, avec un mode sombre, un support multilingue et un historique de recherche, consommant une API REST.' }
+      project3: {
+        title: 'Weather App (Angular)',
+        description: 'Application web complète pour consulter la météo en temps réel, développée avec Angular, comprenant un sélecteur de langue, un historique de recherche et un design responsive avec mode clair/sombre. Consomme des données d\'une API REST.'
+      },
+      project4: { // NUEVO PROYECTO: ApegoConsciente
+        title: 'Apego Consciente',
+        description: 'Application web dédiée à explorer et à favoriser l\'attachement conscient, offrant des ressources et des outils pour comprendre les dynamiques relationnelles et le bien-être émotionnel. Développée avec Angular.'
+      }
     },
     ca: {
       nav_about: 'Sobre mi',
@@ -114,7 +135,14 @@ export class TranslationService {
       job2: { title: 'Formadora i Desenvolupadora de Continguts Digitals', company: 'COCEDER', description: ['Anàlisi de les necessitats de l\'usuari per a dissenyar i adaptar continguts tecnològics, assegurant una corba d\'aprenentatge suau.','Suport tècnic i resolució de problemes a usuaris amb diferents nivells de competència digital.'] },
       project1: { title: 'Portfolio Professional (Aquest Projecte)', description: 'Portfolio personal interactiu desenvolupat des de zero amb les últimes versions d\'Angular per a mostrar els meus projectes i habilitats. Inclou mode clar/fosc i un disseny responsive.' },
       project2: { title: 'ClickToCall - Extensió de Chrome', description: 'Extensió complexa que detecta telèfons en webs i permet trucar o enviar missatges de WhatsApp via API, injectant UI dinàmica a les pàgines.' },
-      project3: { title: 'Weather App', description: 'Aplicació web completa per a consultar el temps, amb mode fosc, multi-idioma i historial de cerques, consumint una API REST.' }
+      project3: {
+        title: 'Weather App (Angular)',
+        description: 'Aplicació web completa per a consultar el temps en temps real, desenvolupada amb Angular, que inclou un selector d\'idioma, historial de cerques i un disseny responsiu amb mode clar/fosc. Consumeix dades d\'una API REST.'
+      },
+      project4: { // NUEVO PROYECTO: ApegoConsciente
+        title: 'Apego Consciente',
+        description: 'Aplicació web dedicada a explorar i fomentar l\'apego conscient, oferint recursos i eines per a entendre les dinàmiques de les relacions i el benestar emocional. Desenvolupada amb Angular.'
+      }
     }
   };
 

@@ -41,7 +41,7 @@ export class ProjectList {
         { name: 'JavaScript (ES6+)', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
         { name: 'HTML5', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
         { name: 'CSS3', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
-        { name: 'API REST', iconUrl: null } // Ejemplo de tecnología sin logo
+        { name: 'API REST', iconUrl: null } 
       ],
       githubUrl: 'https://github.com/edarlinae/Weather-App'
     }

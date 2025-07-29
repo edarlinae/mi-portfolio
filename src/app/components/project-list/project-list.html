@@ -1,32 +1,33 @@
-<section class="projects">
+<div class="project-list-container">
   <h2>{{ t().projects_title }}</h2>
-  <div class="project-grid">
-    @for (project of projects(); track project.translationKey) {
+  <div class="project-grid"> @for (project of projects(); track project.translationKey) {
       <div class="project-card">
-        <div class="image-container">
-          <img class="project-image" [src]="project.imageUrl" [alt]="'Vista previa del proyecto ' + getProjectTranslation(project.translationKey).title">
+        <div class="image-container"> <img class="project-image" [src]="project.imageUrl" [alt]="'Vista previa del proyecto ' + getProjectTranslation(project.translationKey).title">
         </div>
-        <div class="card-content">
-          <h3>{{ getProjectTranslation(project.translationKey).title }}</h3>
+        <div class="card-content"> <h3>{{ getProjectTranslation(project.translationKey).title }}</h3>
           <p>{{ getProjectTranslation(project.translationKey).description }}</p>
-          <p class="tech-list">
-            <strong>Tecnologías:</strong>
-            {{ getTechnologyNames(project.technologies) }}.
-          </p>
-          <div class="project-logos">
-            @for (tech of project.technologies; track tech.name) {
-              @if (tech.iconUrl) {
-                <img [src]="tech.iconUrl" [alt]="tech.name" [title]="tech.name">
-              } @else {
-              }
+
+          <div class="project-logos"> @for (tech of project.technologies; track tech.name) {
+              <div class="tech-item"> @if (tech.iconUrl) {
+                  <img [src]="tech.iconUrl" [alt]="tech.name" [title]="tech.name">
+                } @else {
+                  <span class="tech-name">{{ tech.name }}</span> }
+              </div>
             }
           </div>
-          <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Logo de GitHub" class="github-logo">
-            Ver en GitHub
-          </a>
+
+          <div class="project-links">
+            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="cta-button">
+              <span class="material-symbols-outlined">code</span> GitHub
+            </a>
+            @if (project.liveDemoUrl) {
+              <a [href]="project.liveDemoUrl" target="_blank" rel="noopener noreferrer" class="cta-button secondary">
+                <span class="material-symbols-outlined">visibility</span> Demo
+              </a>
+            }
+          </div>
         </div>
       </div>
     }
   </div>
-</section>
+</div>
