@@ -1,59 +1,86 @@
-# MiPortfolio
+# 💼 Portfolio Profesional de Alicia Caparrós Masiá
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
+¡Bienvenido/a a mi portfolio! Este proyecto es mi carta de presentación como **Desarrolladora de Software**. Ha sido creado desde cero con **Angular** para demostrar mis habilidades en el desarrollo de aplicaciones web modernas, interactivas y funcionales.
 
-## Development server
+🔗 **[Demo en Vivo](https://mi-portfolio-blush.vercel.app)**
 
-To start a local development server, run:
+---
 
+## 📜 Descripción
+
+Este portfolio fue desarrollado con el objetivo de:
+
+- Centralizar mis proyectos más importantes.
+- Contar mi historia profesional.
+- Crear una marca personal como desarrolladora.
+
+Está diseñado para ser **completamente responsive**, **intuitivo** y **accesible**, reflejando mi pasión por construir software de calidad que aporte valor real.
+
+---
+
+## ✨ Funcionalidades Principales
+
+- 🌍 **Multi-idioma:** Soporte para Español, Inglés, Francés y Catalán con un selector de idioma dinámico.
+- 🌗 **Modo Claro y Oscuro:** Interruptor para cambiar el tema, respetando las preferencias del sistema del usuario.
+- 📱 **Diseño Responsive:** Adaptable a móviles, tablets y ordenadores de escritorio.
+- 🧭 **Navegación Fluida:** Scroll suave y enlaces internos entre secciones.
+- ⬆️ **Botón "Volver Arriba":** Mejora la usabilidad en scrolls largos.
+
+### 📂 Secciones del Portfolio
+
+- **Sobre Mí:** Breve resumen de mi trayectoria y transición profesional.
+- **Experiencia:** Timeline interactivo de mi experiencia laboral.
+- **Proyectos:** Galería con mis trabajos más destacados, tecnologías utilizadas y enlaces a GitHub.
+- **Contacto:** Información para facilitar la comunicación con reclutadores.
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+| Categoría         | Tecnologías                                  |
+|------------------|----------------------------------------------|
+| Framework         | Angular                                      |
+| Lenguajes         | TypeScript, JavaScript (ES6+)                |
+| Estilos           | SCSS, CSS3                                   |
+| Control de versiones | Git, GitHub                             |
+| Despliegue        | Vercel                                       |
+
+---
+
+## 🔧 Cómo Ejecutar este Proyecto Localmente
+
+Sigue estos pasos para ejecutar el proyecto en tu entorno local:
+
+-  Clona el repositorio
+```bash
+git clone https://github.com/tu-usuario/tu-repositorio.git
+```
+
+-  Entra al directorio del proyecto
+```bash
+cd tu-repositorio
+```
+
+- Instala las dependencias
+```bash
+npm install
+```
+
+-  Ejecuta el servidor de desarrollo
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Abre tu navegador y ve a http://localhost:4200/.
 
-## Code scaffolding
+---
+## 👤 Contacto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Estoy en búsqueda activa de mi próxima oportunidad profesional. Si mi perfil te resulta interesante, no dudes en contactarme:
 
-```bash
-ng generate component component-name
-```
+- 🌐 Portfolio Web: https://mi-portfolio-blush.vercel.app/
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- 💼 LinkedIn: https://www.linkedin.com/in/alicia-caparros-masia-39aa6a357
 
-```bash
-ng generate --help
-```
+- 📧 Email: caparrosmasiaalicia@gmail.com
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
